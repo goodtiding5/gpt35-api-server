@@ -1,0 +1,10 @@
+services:
+  gpt35:
+    image: epenguincom/gpt35-api-server:latest
+    container_name: gpt35
+    build:
+      context: .
+    init: true
+    ports:
+      - 3040:3040
+    restart: unless-stopped
