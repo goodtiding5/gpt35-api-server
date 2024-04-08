@@ -5,6 +5,9 @@ import https from "https";
 import { encode } from "gpt-3-encoder";
 import { randomUUID } from "crypto";
 
+// tell axios to use gzip compression by default
+axios.defaults.headers.common["Accept-Encoding"] = "gzip";
+
 // Constants for the server and API configuration
 const port = 3040;
 const baseUrl = "https://chat.openai.com";
