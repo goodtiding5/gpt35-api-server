@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "bun app.ts"
-  }
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
