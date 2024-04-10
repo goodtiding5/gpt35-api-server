@@ -279,7 +279,7 @@ async function handleChatCompletion(req: Request, res: Response) {
       JSON.stringify({
         status: false,
         error: {
-		  message: "An error happened, please make sure your request is SFW, or use a jailbreak to bypass the filter.",
+		  message: "An error occurred. Please check the server console to confirm it is ready and free of errors. Additionally, ensure that your request complies with OpenAI's policy.",
           type: "invalid_request_error",
         },
         support: "https://discord.pawan.krd",
@@ -302,7 +302,7 @@ app.use((req, res) =>
   res.status(404).send({
     status: false,
     error: {
-      message: `The requested endpoint was not found. please make sure to use "http://localhost:3040/v1" as the base URL.`,
+      message: `The requested endpoint (${req.method.toLocaleUpperCase()} ${req.path}) was not found. please make sure to use "http://localhost:3040/v1" as the base URL.`,
       type: "invalid_request_error",
     },
     support: "https://discord.pawan.krd",
